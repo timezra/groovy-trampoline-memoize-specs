@@ -1,0 +1,9 @@
+This project demonstrates via a series of Spock specifications the usage of the trampoline and memoize language features available in Groovy 1.8. It also covers two ways of combining trampolining and memoization (i.e., memoization of the top-level trampolined call, and memoization of each individual trampolined call).
+
+This project can be built from the project root using gradle (1.0-M5 as of this writing):
+    $> gradle test
+    
+In order to setup this project in Eclipse, the .project and .classpath files should be setup using gradle:
+    $> gradle eclipseProject
+    $> gradle eclipseClasspath
+       In the generated .classpath file, you will probably want to change the output directory from bin to build/classes

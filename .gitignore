@@ -1,0 +1,7 @@
+/build
+/.settings
+/.gradle
+/.groovy
+/.classpath
+/.project
+/.DS_Store

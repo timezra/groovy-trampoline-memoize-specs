@@ -1,0 +1,17 @@
+apply plugin: 'groovy'
+apply plugin: 'eclipse'
+
+sourceCompatibility = 1.6
+version = '1.0.0-SNAPSHOT'
+
+repositories {
+	mavenCentral()
+	mavenRepo url: "http://m2repo.spockframework.org/snapshots"
+}
+
+dependencies {
+	groovy group: 'org.codehaus.groovy', name: 'groovy', version: '1.8.3'
+	testCompile "org.spockframework:spock-core:0.6-groovy-1.8-SNAPSHOT"
+	testCompile group: 'junit', name: 'junit', version: '4.10'
+}
+
