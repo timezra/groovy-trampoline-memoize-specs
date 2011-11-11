@@ -1,5 +1,7 @@
 This project demonstrates via a series of Spock specifications the usage of the trampoline and memoize language features available in Groovy 1.8. It also covers two ways of combining trampolining and memoization (i.e., memoization of the top-level trampolined call, and memoization of each individual trampolined call).
 
+It is the companion source code for this tutorial: http://timezra.blogspot.com/2011/11/trampoline-and-memoize.html
+
 This project can be built from the project root using gradle (1.0-M5 as of this writing):
     $> gradle test
     
