@@ -6,15 +6,11 @@ class RecursiveMemoizationSpec extends Specification {
 
 	int count
 
-	def recurse(n) {
-		fib n
-	}
-
 	def fib = { n ->
 		count++
 		if(n == 0) 0
 		else if(n == 1) 1
-		else recurse(n-1) + recurse(n-2)
+		else fib.call(n-1) + fib.call(n-2)
 	}.memoize()
 
 	def "calls should be cached"() {

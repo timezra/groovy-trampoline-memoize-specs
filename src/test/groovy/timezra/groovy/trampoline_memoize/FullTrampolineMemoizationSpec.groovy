@@ -1,8 +1,6 @@
 package timezra.groovy.trampoline_memoize
 
-import spock.lang.Specification
-
-class FullTrampolineMemoizationSpec extends Specification {
+class FullTrampolineMemoizationSpec extends spock.lang.Specification {
 
 	int count
 
@@ -12,12 +10,8 @@ class FullTrampolineMemoizationSpec extends Specification {
 		else fib.trampoline n - 1, b, a + b
 	}.memoize()
 
-	def call_fib_aux(n, a, b) {
-		fib_aux n, a, b
-	}
-
 	def fib = { n, a = 0, b = 1 ->
-		call_fib_aux n, a, b
+		fib_aux.call n, a, b
 	}.trampoline()
 
 	def "all trampolined calls should be cached"() {
